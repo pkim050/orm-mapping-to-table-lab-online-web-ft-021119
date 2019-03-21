@@ -38,9 +38,7 @@ class Student
 
   def self.create(name:, grade:)
     #binding.pry
-    hash = {name: name,
-    grade: grade}
-    self.send("name", name)
-    self.send("grade", grade)
+    hash = {name: name, grade: grade}
+    hash.each {|key, value| self.send("#{key}=", value)}
   end
 end
