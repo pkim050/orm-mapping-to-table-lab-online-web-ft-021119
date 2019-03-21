@@ -38,7 +38,7 @@ class Student
 
   def self.create(name:, grade:)
     binding.pry
-    self.send(@name, name)
-    self.send(@grade, grade)
+    self.send(:name, name)
+    self.send(:grade, grade)
   end
 end
