@@ -37,6 +37,7 @@ class Student
   end
 
   def self.create(name:, grade:)
-
+    self.send("#{name}=", name)
+    self.send("#{grade}=", grade)
   end
 end
