@@ -9,6 +9,6 @@ class Student
     @grade = grade
     @id = id
     @@all << self
-  end  
-  
+  end
+
 end
