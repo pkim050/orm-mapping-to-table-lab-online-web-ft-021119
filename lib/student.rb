@@ -38,6 +38,8 @@ class Student
 
   def self.create(name:, grade:)
     #binding.pry
+    hash = {name: name,
+    grade: grade}
     self.send("name", name)
     self.send("grade", grade)
   end
