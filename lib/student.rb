@@ -37,6 +37,6 @@ class Student
     DB[:conn].execute(sql, self.name, self.grade)
     id = DB[:conn].execute("SELECT id FROM students WHERE name = ?", self.name).flatten[0]
     Student.new(self.name, self.grade, id: id)
-    binding.pry
+    @@all[-1]
   end
 end
